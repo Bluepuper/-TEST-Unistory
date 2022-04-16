@@ -94,8 +94,8 @@ Nikita Razhev can't have more than 5 books
 #### Request example
 ```json
 {
-  "name": "Nikita",
-  "author": "Razhev"
+  "name": "Crime and punishment",
+  "author": "Fyodor Dostaevski"
 }
 ```
 #### Response example
