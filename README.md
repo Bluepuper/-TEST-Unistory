@@ -87,3 +87,22 @@ Nikita Razhev has a subscription
 ```
 Nikita Razhev can't have more than 5 books
 ```
+
+## Create a book
+`POST /books`
+
+#### Request example
+```json
+{
+  "name": "Nikita",
+  "author": "Razhev"
+}
+```
+#### Response example
+```json
+{
+  "name": "Crime and punishment",
+  "author": "Fyodor Dostaevski",
+  "id": 6
+}
+```
