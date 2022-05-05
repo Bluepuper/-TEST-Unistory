@@ -10,13 +10,11 @@ export class UsersController {
     constructor(private usersService: UsersService) {}
 
 
-    // Getting all users' data
     @Get()
     getAll() {
         return this.usersService.getAll()
     }
 
-    // Getting the user's data
     @Get(':id')
     getOne(
         @Param('id') id: number,
@@ -24,7 +22,6 @@ export class UsersController {
         return this.usersService.getOne(id)
     }
 
-    // Creating the user
     @Post('')
     create(
         @Body() dto: CreateUserDto
@@ -32,7 +29,6 @@ export class UsersController {
         return this.usersService.create(dto)
     }
 
-    // Updating the user
     @Patch(':id')
     update(
         @Param('id') id: number,
@@ -41,7 +37,6 @@ export class UsersController {
         return this.usersService.update(id, dto)
     }
 
-    // Deleting the user
     @Delete(':id')
     delete(
         @Param('id') id: number,
@@ -49,7 +44,6 @@ export class UsersController {
         return this.usersService.delete(id)
     }
 
-    // Checking whether the user has a subscription
     @Get(':id/subscription')
     isMember(
         @Param('id') id: number,
@@ -57,7 +51,6 @@ export class UsersController {
         return this.usersService.hasSubscription(id)
     }
 
-    // Giving a subscription to the user
     @Patch(':id/subscription')
     giveSubscription(
         @Param('id') id: number,
@@ -65,7 +58,6 @@ export class UsersController {
         return this.usersService.giveSubscription(id)
     }
 
-    // Give or remove the book 
     @Patch(':userId/books/:bookId')
     manageBook(
         @Param() params: {userId: number, bookId: number},
